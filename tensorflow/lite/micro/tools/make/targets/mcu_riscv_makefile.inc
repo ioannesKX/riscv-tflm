@@ -5,7 +5,7 @@ TARGET_TOOLCHAIN_PREFIX := riscv64-unknown-elf-
 export PATH := $(MAKEFILE_DIR)/downloads/riscv_toolchain/bin/:$(PATH)
 
 PLATFORM_FLAGS = \
-  -march=rv64gcp \
+  -march=rv64gc \
   -mabi=lp64d \
   -mcmodel=medany \
   -mexplicit-relocs \
@@ -16,8 +16,6 @@ PLATFORM_FLAGS = \
   -funsigned-char \
   -fno-delete-null-pointer-checks \
   -fomit-frame-pointer \
-  -DRISCV_PROF \
-  -DRISCV_P_EXT
 
 CXXFLAGS += $(PLATFORM_FLAGS) \
   -fpermissive \
